@@ -12,6 +12,27 @@
 - [Testnet](https://testnet.solidly.exchange/)
 - [Live](https://solidly.exchange/)
 
+## Requirements
+- Solidly API
+- Solidly API Token
+
+### Setup
+
+Example environment setup below. You are responsible for running a local solidly api, or acquiring an API token for a live deployment.
+
+```sh
+# Set the fantom network you wish to use
+# Mainnet: 250
+# Testnet: 4002
+export NEXT_PUBLIC_CHAINID=250
+
+# Set the Solidly API endpoint URL
+export NEXT_PUBLIC_API=https://api.solidly.exchange
+
+# Set the Solidly API Token
+export NEXT_PUBLIC_API_TOKEN=__________________
+```
+
 ## Getting started
 - Make sure to have nodejs installed. This app is built using [Next.js](https://nextjs.org/learn/basics/create-nextjs-app) and [react](https://reactjs.org/docs/getting-started.html).
 - Run `npm install`

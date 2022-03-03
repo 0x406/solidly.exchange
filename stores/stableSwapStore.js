@@ -764,15 +764,15 @@ class Store {
       this.setStore({ govToken: this._getGovTokenBase() })
       this.setStore({ veToken: this._getVeTokenBase() })
       this.setStore({ baseAssets: await this._getBaseAssets() })
+      
+      this.dispatcher.dispatch({ type: ACTIONS.GET_BALANCES })
+      
       this.setStore({ routeAssets: await this._getRouteAssets() })
       this.setStore({ pairs: await this._getPairs() })
 
       this.emitter.emit(ACTIONS.UPDATED)
       this.emitter.emit(ACTIONS.CONFIGURED_SS)
 
-      setTimeout(() => {
-        this.dispatcher.dispatch({ type: ACTIONS.GET_BALANCES })
-      }, 1)
     } catch (ex) {
       console.log(ex)
       this.emitter.emit(ACTIONS.ERROR, ex)
