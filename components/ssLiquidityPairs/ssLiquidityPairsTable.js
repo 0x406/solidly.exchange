@@ -400,7 +400,7 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: '700',
   },
   filterContainer: {
-    background: '#212b48',
+    background: 'rgb(5, 9, 20)',
     minWidth: '300px',
     marginTop: '15px',
     borderRadius: '10px',
@@ -452,7 +452,7 @@ const useStyles = makeStyles((theme) => ({
 
 const getLocalToggles = () => {
   let localToggles = {
-    toggleActive: true,
+    toggleActive: false,
     toggleActiveGauge: true,
     toggleVariable: true,
     toggleStable: true

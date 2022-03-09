@@ -49,18 +49,23 @@ class Store {
           // LIQUIDITY
           case ACTIONS.CREATE_PAIR_AND_STAKE:
             this.createPairStake(payload)
+            this.getBalances(payload)
             break
           case ACTIONS.CREATE_PAIR_AND_DEPOSIT:
             this.createPairDeposit(payload)
+            this.getBalances(payload)
             break
           case ACTIONS.ADD_LIQUIDITY:
             this.addLiquidity(payload)
+            this.getBalances(payload)
             break
           case ACTIONS.STAKE_LIQUIDITY:
             this.stakeLiquidity(payload)
+            this.getBalances(payload)
             break
           case ACTIONS.ADD_LIQUIDITY_AND_STAKE:
             this.addLiquidityAndStake(payload)
+            this.getBalances(payload)
             break
           case ACTIONS.QUOTE_ADD_LIQUIDITY:
             this.quoteAddLiquidity(payload)
@@ -70,15 +75,18 @@ class Store {
             break
           case ACTIONS.REMOVE_LIQUIDITY:
             this.removeLiquidity(payload)
+            this.getBalances(payload)
             break
           case ACTIONS.UNSTAKE_AND_REMOVE_LIQUIDITY:
             this.unstakeAndRemoveLiquidity(payload)
+            this.getBalances(payload)
             break
           case ACTIONS.QUOTE_REMOVE_LIQUIDITY:
             this.quoteRemoveLiquidity(payload)
             break
           case ACTIONS.UNSTAKE_LIQUIDITY:
             this.unstakeLiquidity(payload)
+            this.getBalances(payload)
             break
           case ACTIONS.CREATE_GAUGE:
             this.createGauge(payload)
@@ -90,6 +98,7 @@ class Store {
             break
           case ACTIONS.SWAP:
             this.swap(payload)
+            this.getBalances(payload)
             break
 
           // VESTING
@@ -107,6 +116,7 @@ class Store {
             break
           case ACTIONS.WITHDRAW_VEST:
             this.withdrawVest(payload)
+            this.getBalances(payload)
             break
 
           //VOTE
@@ -129,18 +139,23 @@ class Store {
             break
           case ACTIONS.CLAIM_BRIBE:
             this.claimBribes(payload)
+            this.getBalances(payload)
             break
           case ACTIONS.CLAIM_PAIR_FEES:
             this.claimPairFees(payload)
+            this.getBalances(payload)
             break
           case ACTIONS.CLAIM_REWARD:
             this.claimRewards(payload)
+            this.getBalances(payload)
             break
           case ACTIONS.CLAIM_VE_DIST:
             this.claimVeDist(payload)
+            this.getBalances(payload)
             break
           case ACTIONS.CLAIM_ALL_REWARDS:
             this.claimAllRewards(payload)
+            this.getBalances(payload)
             break;
 
           //WHITELIST
@@ -4414,9 +4429,7 @@ class Store {
           return this.emitter.emit(ACTIONS.ERROR, err)
         }
 
-        window.setTimeout(() => {
-          this.dispatcher.dispatch({ type: ACTIONS.SEARCH_WHITELIST, content: { search: token.address } })
-        }, 2)
+        this.dispatcher.dispatch({ type: ACTIONS.SEARCH_WHITELIST, content: { search: token.address } })
 
         this.emitter.emit(ACTIONS.WHITELIST_TOKEN_RETURNED)
       })

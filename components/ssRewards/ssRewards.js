@@ -45,18 +45,12 @@ export default function ssRewards() {
     if(nfts && nfts.length > 0) {
       if(!token) {
         setToken(nfts[0])
-        window.setTimeout(() => {
-          stores.dispatcher.dispatch({ type: ACTIONS.GET_REWARD_BALANCES, content: { tokenID: nfts[0].id } })
-        })
+        stores.dispatcher.dispatch({ type: ACTIONS.GET_REWARD_BALANCES, content: { tokenID: nfts[0].id } })
       } else {
-        window.setTimeout(() => {
-          stores.dispatcher.dispatch({ type: ACTIONS.GET_REWARD_BALANCES, content: { tokenID: token.id } })
-        })
+        stores.dispatcher.dispatch({ type: ACTIONS.GET_REWARD_BALANCES, content: { tokenID: token.id } })
       }
     } else {
-      window.setTimeout(() => {
-        stores.dispatcher.dispatch({ type: ACTIONS.GET_REWARD_BALANCES, content: { tokenID: 0 } })
-      })
+      stores.dispatcher.dispatch({ type: ACTIONS.GET_REWARD_BALANCES, content: { tokenID: 0 } })
     }
 
     forceUpdate()

@@ -363,7 +363,7 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: '700',
   },
   filterContainer: {
-    background: '#212b48',
+    background: 'rgb(5, 9, 20)',
     minWidth: '300px',
     marginTop: '15px',
     borderRadius: '10px',

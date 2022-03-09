@@ -20,17 +20,21 @@
 
 Example environment setup below. You are responsible for running a local solidly api, or acquiring an API token for a live deployment.
 
+See [Environment Variables](https://nextjs.org/docs/basic-features/environment-variables)
+
 ```sh
+# .env
+
 # Set the fantom network you wish to use
 # Mainnet: 250
 # Testnet: 4002
-export NEXT_PUBLIC_CHAINID=250
+NEXT_PUBLIC_CHAINID=250
 
 # Set the Solidly API endpoint URL
-export NEXT_PUBLIC_API=https://api.solidly.exchange
+NEXT_PUBLIC_API=https://api.solidly.exchange
 
 # Set the Solidly API Token
-export NEXT_PUBLIC_API_TOKEN=__________________
+NEXT_PUBLIC_API_TOKEN=__________________
 ```
 
 ## Getting started

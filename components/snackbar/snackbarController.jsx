@@ -41,14 +41,10 @@ class SnackbarController extends Component {
     };
     this.setState(snackbarObj);
 
-    const that = this;
-    setTimeout(() => {
-      const snackbarObj = {
-        snackbarMessage: error.toString(),
-        snackbarType: "Error",
-        open: true
-      };
-      that.setState(snackbarObj);
+    this.setState({
+      snackbarMessage: error.toString(),
+      snackbarType: "Error",
+      open: true
     });
   };
 
@@ -60,14 +56,10 @@ class SnackbarController extends Component {
     };
     this.setState(snackbarObj);
 
-    const that = this;
-    setTimeout(() => {
-      const snackbarObj = {
-        snackbarMessage: txHash,
-        snackbarType: "Hash",
-        open: true
-      };
-      that.setState(snackbarObj);
+    this.setState({
+      snackbarMessage: txHash,
+      snackbarType: "Hash",
+      open: true
     });
   };
 

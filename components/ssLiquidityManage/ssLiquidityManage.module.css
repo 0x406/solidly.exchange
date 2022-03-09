@@ -301,7 +301,7 @@
   cursor: pointer;
   padding: 6px;
   font-size: 30px !important;
-  background: rgb(33, 43, 72);
+  background: rgb(15, 22, 44);
   margin: 4px;
   border-radius: 6px;
 }
@@ -316,7 +316,7 @@
   border-radius: 10px;
   width: 100%;
   align-items: center;
-  background: rgb(33, 43, 72);
+  background: rgb(15, 22, 44);
 }
 
 .massiveInputAssetSelect {
@@ -348,7 +348,7 @@
 .displayAssetIcon {
   border: 1px solid rgba(128, 128, 128, 0.5);
   border-radius: 50px;
-  background: rgb(33, 43, 72);
+  background: rgb(15, 22, 44);
   width: 100px;
   height: 100px;
   padding: 10px;
@@ -360,7 +360,7 @@
   border-radius: 10px;
   width: 100%;
   align-items: center;
-  background: rgb(33, 43, 72);
+  background: rgb(15, 22, 44);
   min-height: 50px;
 }
 
@@ -393,7 +393,7 @@
 .mediumdisplayAssetIcon {
   border: 1px solid rgba(128, 128, 128, 0.5);
   border-radius: 50px;
-  background: rgb(33, 43, 72);
+  background: rgb(15, 22, 44);
   width: 50px;
   height: 50px;
   padding: 5px;
@@ -476,7 +476,7 @@
   align-items: center;
   justify-content: center;
   background: none;
-  border: 1px solid #212B48;
+  border: 1px solid rgb(5, 9, 20);
   border-radius: 10px;
   width: calc(100% - 50px);
   margin: 20px 25px 0 25px;
@@ -574,7 +574,7 @@
 .displayAssetIconSmall {
   border: 1px solid rgba(126, 153, 153, 0.5);
   border-radius: 30px;
-  background: rgb(33, 43, 72);
+  background: rgb(15, 22, 44);
   padding: 6px;
 }
 
@@ -612,7 +612,7 @@
   border-radius: 10px;
   width: 100%;
   align-items: center;
-  background: rgb(33, 43, 72);
+  background: rgb(15, 22, 44);
   max-width: 80px;
   min-height: 50px;
   padding: 20px 12px 4px 12px ;

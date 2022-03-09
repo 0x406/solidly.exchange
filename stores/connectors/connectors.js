@@ -10,6 +10,7 @@ const RPC_URLS = {
 };
 
 let obj = {}
+
 if(process.env.NEXT_PUBLIC_CHAINID == 250) {
   obj = { 250: RPC_URLS[250] }
 } else {
@@ -38,3 +39,6 @@ export const walletlink = new WalletLinkConnector({
   appName: "Solidly",
   chainId: parseInt(process.env.NEXT_PUBLIC_CHAINID),
 });
+
+console.log(process.env)
+console.log(parseInt(process.env.NEXT_PUBLIC_CHAINID))

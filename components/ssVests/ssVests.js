@@ -37,9 +37,7 @@ export default function ssVests() {
       forceUpdate()
     }
 
-    window.setTimeout(() => {
-      stores.dispatcher.dispatch({ type: ACTIONS.GET_VEST_NFTS, content: {} })
-    }, 1)
+    stores.dispatcher.dispatch({ type: ACTIONS.GET_VEST_NFTS, content: {} })
 
     stores.emitter.on(ACTIONS.VEST_NFTS_RETURNED, vestNFTsReturned)
     return () => {

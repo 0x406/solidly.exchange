@@ -7,8 +7,8 @@ const theme = createTheme({
   palette: {
     ...coreTheme.palette,
     background: {
-      default: "#131929",
-      paper: "rgb(25, 33, 56)"
+      default: "rgb(4, 0, 29)",
+      paper: "rgb(5, 9, 20)"
     },
     primary: {
       main: "#06d3d7"
@@ -24,7 +24,7 @@ const theme = createTheme({
     MuiSnackbarContent: {
       root: {
         color: "#fff",
-        backgroundColor: "#2A2E3C",
+        backgroundColor: "rgb(16, 23, 44)",
         padding: "0px",
         minWidth: "auto",
         "@media (min-width: 960px)": {
